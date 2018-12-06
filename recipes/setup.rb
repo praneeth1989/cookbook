@@ -1,7 +1,9 @@
 package 'tree' do
 	action :install
 end
-
+package 'emacs' do
+  action :install
+end
 package 'ntp'
 package 'git' do
   action :install
@@ -11,7 +13,7 @@ package 'git' do
 end
 
 file '/etc/motd' do
-	content 'This server is the property of ...'
+	content 'server is the property of ...'
 	action :create
 	owner 'root'
 	group 'root'
